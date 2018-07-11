@@ -1,3 +1,32 @@
 <div class="page-header">
-  <h1>HOME</h1>
+  
+  <div class="row">
+    <div class="col-sm-6">
+        <h2>Sample</h2>
+      <chart #chart1 [type]="typeChart" [data]="dataChart" [options]="optionsChart"></chart>
+      <!-- <canvas  [type]="typeChart" [data]="dataChart" [options]="optionsChart"></canvas> -->
+      <canvas #chart2></canvas>
+    </div>
+    <div class="col-sm-6">
+        <h2>Option</h2>    
+        <div class="row">
+          <div class="col-sm-6">scales.xAxes.scaleLabel.labelSstring</div>
+          <div class="col-sm-6"> 
+            <input [(ngModel)]="optionsChartBar.scales.xAxes[0].scaleLabel.labelString" (ngModelChange)="OnChangeChartOption()">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">scales.yAxes[0].ticks.suggestedMax</div>
+            <div class="col-sm-6"> 
+              <input [(ngModel)]="optionsChartBar.scales.yAxes[0].ticks.suggestedMax" (ngModelChange)="OnChangeChartOption()">
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-sm-6">dataChart.datasets[0].data[0]</div>
+              <div class="col-sm-6"> 
+                <input [(ngModel)]="dataChart.datasets[0].data[0]" (ngModelChange)="OnChangeChartOption()">
+              </div>
+            </div>
+    </div>
+  </div>
 </div>

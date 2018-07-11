@@ -8,6 +8,10 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import {ChartModule} from 'angular2-chartjs';
+
+// import {Chart} from 'chart.js';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +22,9 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     FormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+     ChartModule
+  //  , Chart
   ],
   providers: [],
   bootstrap: [AppComponent]
