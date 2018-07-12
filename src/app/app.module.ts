@@ -8,7 +8,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 
-import {ChartModule} from 'angular2-chartjs';
+//import {ChartModule} from 'angular2-chartjs';
+import { LineChartComponent } from './line-chart/line-chart.component';
+import {ChartsModule} from 'ng2-charts';
 
 // import {Chart} from 'chart.js';
 
@@ -16,14 +18,15 @@ import {ChartModule} from 'angular2-chartjs';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    LineChartComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     AppRoutingModule,
-     ChartModule
+    ChartsModule
   //  , Chart
   ],
   providers: [],

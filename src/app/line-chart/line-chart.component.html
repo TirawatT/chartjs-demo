@@ -1,0 +1,41 @@
+<div class="page-header">
+  
+  <div class="row">
+    <div class="col-sm-6">
+        <h2>Sample Line Chart</h2>
+        <canvas baseChart width="400" height="200"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                (chartHover)="chartHovered($event)"
+                (chartClick)="chartClicked($event)"></canvas>
+
+           
+    </div>
+    <div class="col-sm-6">
+        <h2>Option</h2>    
+        <div class="row">
+          <div class="col-sm-6">scales.xAxes.scaleLabel.labelSstring</div>
+          <div class="col-sm-6"> 
+           <input [(ngModel)]="lineChartOptions.scales.xAxes[0].scaleLabel.labelString" (ngModelChange)="OnChangeChartOption()">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-6">dataChart.datasets[0].data[1]</div>
+          <div class="col-sm-6"> 
+            <input [(ngModel)]="lineChartData[0].data[1]" (ngModelChange)="OnChangeChartData()">
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">scales.yAxes[0].ticks.suggestedMax</div>
+            <div class="col-sm-6"> 
+              <input [(ngModel)]="lineChartOptions.scales.yAxes[0].ticks.suggestedMax" (ngModelChange)="OnChangeChartOption()">
+            </div>
+          </div>
+     
+    </div>
+  </div>
+</div>

@@ -1,10 +1,9 @@
-<div class="page-header">
+<!-- <div class="page-header">
   
   <div class="row">
     <div class="col-sm-6">
         <h2>Sample</h2>
-      <chart #chart1 [type]="typeChart" [data]="dataChart" [options]="optionsChart"></chart>
-      <!-- <canvas  [type]="typeChart" [data]="dataChart" [options]="optionsChart"></canvas> -->
+        <chart #chart1 [type]="typeChart" [data]="dataChart" [options]="optionsChart" (click)="clickData()"></chart>
       <canvas #chart2></canvas>
     </div>
     <div class="col-sm-6">
@@ -12,21 +11,24 @@
         <div class="row">
           <div class="col-sm-6">scales.xAxes.scaleLabel.labelSstring</div>
           <div class="col-sm-6"> 
-            <input [(ngModel)]="optionsChartBar.scales.xAxes[0].scaleLabel.labelString" (ngModelChange)="OnChangeChartOption()">
+           <input [(ngModel)]="optionsChart.scales.xAxes[0].scaleLabel.labelString" (ngModelChange)="OnChangeChartOption()">
           </div>
         </div>
         <div class="row">
             <div class="col-sm-6">scales.yAxes[0].ticks.suggestedMax</div>
             <div class="col-sm-6"> 
-              <input [(ngModel)]="optionsChartBar.scales.yAxes[0].ticks.suggestedMax" (ngModelChange)="OnChangeChartOption()">
+              <input [(ngModel)]="optionsChart.scales.yAxes[0].ticks.suggestedMax" (ngModelChange)="OnChangeChartOption()">
+              <input [(ngModel)]="optionSuggestedMax" (ngModelChange)="OnChangeChartOption()">
             </div>
           </div>
           <div class="row">
               <div class="col-sm-6">dataChart.datasets[0].data[0]</div>
               <div class="col-sm-6"> 
-                <input [(ngModel)]="dataChart.datasets[0].data[0]" (ngModelChange)="OnChangeChartOption()">
+                <input [(ngModel)]="dataChart.datasets[0].data[1]" (ngModelChange)="OnChangeChartOption()">
+                <input [(ngModel)]="dataArray[1]" (ngModelChange)="OnChangeChartOption()">
+              {{dataChart.datasets[0].data[1]}}
               </div>
             </div>
     </div>
   </div>
-</div>
+</div> -->
