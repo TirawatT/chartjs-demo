@@ -20,10 +20,10 @@ export class HomeComponent implements OnInit {
   dataArray = [10, 30, 50, 30, 40];
 optionSuggestedMax = 50;
   dataChartBar = {
-    labels: ["January", "February", "March", "April", "May"],
+    labels: ['January', 'February', 'March', 'April', 'May'],
     datasets: [
       {
-        label: "My Stats Chart",
+        label: 'My Stats Chart',
         data: this.dataArray,
       }
     ]
@@ -31,11 +31,11 @@ optionSuggestedMax = 50;
 
   datasets = [
     {
-      label: "My Stats Chart",
+      label: 'My Stats Chart',
       data: this.dataArray,
     }
-  ]
-  labels = ["January", "February", "March", "April", "May"]
+  ];
+  labels = ['January', 'February', 'March', 'April', 'May'];
 
  
 
@@ -49,10 +49,10 @@ optionSuggestedMax = 50;
   CreateChart() {
     // this.dataChart =  this.dataChartBar
     this.dataChart =  {
-      labels: ["January", "February", "March", "April", "May"],
+      labels: ['January', 'February', 'March', 'April', 'May'],
       datasets: [
         {
-          label: "My Stats Chart",
+          label: 'My Stats Chart',
           data: this.dataArray,
         }
       ]
@@ -64,7 +64,7 @@ optionSuggestedMax = 50;
             gridLines: {
               offsetGridLines: true,
               display: false
-  
+
             },
             scaleLabel: {
               display: true,
@@ -90,7 +90,7 @@ optionSuggestedMax = 50;
               suggestedMin: 0,
               suggestedMax: this.optionSuggestedMax,
               // suggestedMax: 50,
-              
+
               beginAtZero: true
             },
             stacked: false,
@@ -100,18 +100,18 @@ optionSuggestedMax = 50;
       responsive: true,
       maintainAspectRatio: false
     };
-   
+
   }
   OnChangeChartOption() {
-    
-   
-   
+
+
+
   }
   clickData(){
 
 
-    this.dataChart.datasets[0].data[1]+=15;
-    this.datasets[0].data[1]+=15;
+    this.dataChart.datasets[0].data[1] += 15;
+    this.datasets[0].data[1] += 15;
     // just trying refresh full variable
  //   this.dataChart = this.dataChartBar;
  //   this.dataChart = this.dataChart.slice();
